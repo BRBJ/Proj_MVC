@@ -1,37 +1,24 @@
-<?php 
-class Turista
-{
-	private $_idTurista;
-	private $_idDescuento;
-	private $_idPaquete;
+<?php
+class Turista extends Cliente{
 
-	function __construct()
-	{
+  private $_idPaquete;
 
-	}
-	public function getIdTurista()
-	{
-		return $this->_idTurista;
-	}
-	public function setIdTurista($_idTurista)
-	{
-		$this->_idTurista=$_idTurista;
-	}
-	public function getIdDescuento()
-	{
-		return $this->_idDescuento;
-	}
-	public function setIdDescuento($_idDescuento)
-	{
-		$this->_idDescuento=$_idDescuento;
-	}
-	public function getIdPaquete()
-	{
-		return $this->_idPaquete;
-	}
-	public function setIdPaquete($_idPaquete)
-	{
-		$this->_idPaquete=$_idPaquete;
-	}
+  public function __construct(){
+  }
+
+  public function getIdPaquete(){
+    return $this->_idPaquete;
+  }
+  public function setIdPaquete(){
+    $this->_idPaquete=$_idPaquete;
+  }
+
+  public function mostrarDatos(){
+    $consulta=$this->bd->query("select * from turista");
+    while($filas=$consulta->fetch_assoc()){
+       $this->cliente[]=$filas;
+           }
+    return $this->cliente;
+  }
 }
- ?>
+?>
