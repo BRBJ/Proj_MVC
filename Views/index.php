@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -65,13 +65,14 @@
 
           <!--Modal de Registro-->
           <div class="modal fade" id="modelRegistro">
+            <form action="#" method="POST">
             <div class="modal-dialog">
               <div class="modal-content">
                   <div class="modal-header m">
                     <h4 class="modal-title">Formulario de Registro</h4>
                   </div>
                   <div class="modal-body m">
-                    <form>
+                    <form action="#" method="POST">
                       <div class="form-group">
                         <label for="nombre"></label>
                         <input type="text" name="nom" placeholder="Nombre">
@@ -100,14 +101,14 @@
                         <label for="con-pass"></label>
                         <input type="password" name="con-pass" placeholder="Confirm Password">
                       </div>
-                    </form>
                   </div>
                   <div class="modal-footer m">
-                    <button name="aceptar" class="btn btn-primary">Aceptar</button>
-                    <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <input type="submit" class="btn btn-primary" value="Aceptar" name="acept">
+                    <input type="submit" class="btn btn-default" value="Cancelar" name="cancel" data-dismiss="modal">
                   </div>
               </div>
             </div>
+          </form>
           </div>
           <!--Modal de Ingreso-->
           <div class="modal fade" id="modelIngreso">
@@ -117,7 +118,7 @@
                     <h4 class="modal-title">Ingresar</h4>
                   </div>
                   <div class="modal-body m">
-                    <form>
+                    <form action="#" method="POST">
                       <div class="form-group">
                         <label for="user"></label>
                         <input type="text" name="user" placeholder="E-Mail">
@@ -129,8 +130,8 @@
                     </form>
                   </div>
                   <div class="modal-footer m">
-                    <button class="btn btn-primary">Aceptar</button>
-                    <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <input type="text" class="btn btn-primary" value="Aceptar" name="acept1">
+                    <input type="text" class="btn btn-default" value="Cancelar" name="cancel1" data-dismiss="modal">
                   </div>
               </div>
             </div>

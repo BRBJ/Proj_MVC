@@ -1,5 +1,4 @@
-<?php 
-
-	header("location: Views/index.php");
-
+<?php
+	require 'Conexion/Conectar.php';
+	require 'Controller/controlador.php';
  ?>

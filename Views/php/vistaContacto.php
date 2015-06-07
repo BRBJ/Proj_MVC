@@ -71,7 +71,7 @@
                     <h4 class="modal-title">Formulario de Registro</h4>
                   </div>
                   <div class="modal-body m">
-                    <form>
+                    <form action="#" method="POST">
                       <div class="form-group">
                         <label for="nombre"></label>
                         <input type="text" name="nom" placeholder="Nombre">
@@ -103,8 +103,8 @@
                     </form>
                   </div>
                   <div class="modal-footer m">
-                    <button class="btn btn-primary">Aceptar</button>
-                    <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <input type="text" class="btn btn-primary" value="Aceptar" name="aceptConta">
+                    <input type="text" class="btn btn-default" value="Cancelar" name="cancelConta" data-dismiss="modal">
                   </div>
               </div>
             </div>
@@ -117,7 +117,7 @@
                     <h4 class="modal-title">Ingresar</h4>
                   </div>
                   <div class="modal-body m">
-                    <form>
+                    <form action="#" method="POST">
                       <div class="form-group">
                         <label for="user"></label>
                         <input type="text" name="user" placeholder="Usename">
@@ -129,8 +129,8 @@
                     </form>
                   </div>
                   <div class="modal-footer m">
-                    <button class="btn btn-primary">Aceptar</button>
-                    <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <input type="text" class="btn btn-primary" value="Aceptar" name="aceptConta1">
+                    <input type="text" class="btn btn-default" value="Cancelar" name="cancelConta1" data-dismiss="modal">
                   </div>
               </div>
             </div>

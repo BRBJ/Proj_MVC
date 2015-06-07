@@ -10,6 +10,7 @@ class Cliente{
   private $_nacionalidad;
 
   public function __construct(){
+    $this ->bd=Conectar::conexion();
   }
 
   public function getIdCliente(){
