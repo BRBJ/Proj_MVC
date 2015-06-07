@@ -8,16 +8,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
@@ -36,17 +36,17 @@
             <span class="icon-bar app-bar"></span>
             <span class="icon-bar app-bar"></span>
           </button>
-          <a class="navbar-brand link-personalizado" href="#">Proj Renta</a>
+          <a class="navbar-brand link-personalizado" href="../index.php">Proj Renta</a>
         </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right nav-1">
-              <li><a href="php/vistaVehiculos.php">Vechículos
+              <li><a href="vistaVehiculos.php">Vechículos
                 <span class="glyphicon icon-automobile"></span></a></li>
-              <li><a href="php/vistaDescuentos.php">Descuentos
+              <li><a href="vistaDescuentos.php">Descuentos
                 <span class="glyphicon icon-gift"></span></a></li>
-              <li><a href="php/vistaPaquetes.php">Paquetes
+              <li><a href="#">Paquetes
                 <span class="glyphicon icon-briefcase"></span></a></li>
-              <li><a href="php/vistaContacto.php">Contactenos
+              <li><a href="vistaContacto.php">Contactenos
                 <span class="glyphicon icon-envelop"></span></a></li>
               <li><a href="#modelRegistro" data-toggle="modal">Registro
                 <span class="glyphicon icon-user-plus"></span></a></li>
@@ -138,7 +138,8 @@
         </div>
       </section>
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <?php
+    /*<div class="jumbotron">
       <div class="container">
         <div class="carousel slide" id="miSlider" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -167,8 +168,8 @@
           </div>
         </div>
       </div>
-    </div>
-
+    </div>*/
+    ?>
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">

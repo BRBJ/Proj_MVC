@@ -36,17 +36,17 @@
             <span class="icon-bar app-bar"></span>
             <span class="icon-bar app-bar"></span>
           </button>
-          <a class="navbar-brand link-personalizado" href="#">Proj Renta</a>
+          <a class="navbar-brand link-personalizado" href="../index.php">Proj Renta</a>
         </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right nav-1">
               <li><a href="#">Vechículos
                 <span class="glyphicon icon-automobile"></span></a></li>
-              <li><a href="#">Descuentos
+              <li><a href="vistaDescuentos.php">Descuentos
                 <span class="glyphicon icon-gift"></span></a></li>
-              <li><a href="#">Paquetes
+              <li><a href="vistaPaquetes.php">Paquetes
                 <span class="glyphicon icon-briefcase"></span></a></li>
-              <li><a href="#">Contactenos
+              <li><a href="vistaContacto.php">Contactenos
                 <span class="glyphicon icon-envelop"></span></a></li>
               <li><a href="#modelRegistro" data-toggle="modal">Registro
                 <span class="glyphicon icon-user-plus"></span></a></li>
