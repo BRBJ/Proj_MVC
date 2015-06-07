@@ -103,7 +103,7 @@
                     </form>
                   </div>
                   <div class="modal-footer m">
-                    <button class="btn btn-primary">Aceptar</button>
+                    <button name="aceptar" class="btn btn-primary">Aceptar</button>
                     <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
                   </div>
               </div>
@@ -120,7 +120,7 @@
                     <form>
                       <div class="form-group">
                         <label for="user"></label>
-                        <input type="text" name="user" placeholder="Usename">
+                        <input type="text" name="user" placeholder="E-Mail">
                       </div>
                       <div class="form-group">
                         <label for="pass"></label>
