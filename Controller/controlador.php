@@ -13,7 +13,6 @@ if (isset($_POST["aceptar"])) {
     $nac = $_POST["nacio"];
   }else {
     print("<script>alert('No coinciden las contraseñas')</script>");
-    header("location:#modelRegistro");
   }
 
 }
