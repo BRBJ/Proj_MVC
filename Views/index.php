@@ -39,11 +39,19 @@
           <a class="navbar-brand link-personalizado" href="#">Proj Renta</a>
         </div>
           <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav nacbar-right nav-1">
-              <li><a href="#">Vechiculos</a></li>
-              <li><a href="#">Descuentos</a></li>
-              <li><a href="#">Paquetes</a></li>
-              <li><a href="#">Contactenos</a></li>
+            <ul class="nav navbar-nav navbar-right nav-1">
+              <li><a href="#">Vechículos
+                <span class="glyphicon icon-automobile"></span></a></li>
+              <li><a href="#">Descuentos
+                <span class="glyphicon icon-gift"></span></a></li>
+              <li><a href="#">Paquetes
+                <span class="glyphicon icon-briefcase"></span></a></li>
+              <li><a href="#">Contactenos
+                <span class="glyphicon icon-envelop"></span></a></li>
+              <li><a href="#modelRegistro" data-toggle="modal">Registro
+                <span class="glyphicon icon-user-plus"></span></a></li>
+              <li><a href="#modelIngreso" data-toggle="modal">Ingresar
+                <span class="glyphicon icon-users"></span></a></li>
             </ul>
 
           </div><!--/.navbar-collapse -->
@@ -53,9 +61,8 @@
       <section class="app-principal">
         <div class="container">
           <h1>Proj Renta</h1>
-          <p>Renta de vehiculos en linea</p>
-          <button class="btn btn-primary" data-toggle="modal" data-target="#modelRegistro">Registro</button>
-          <button class="btn btn-info" data-toggle="modal" data-target="#modelIngreso">Ingresar</button>
+          <p>Renta de vehículos en linea</p>
+
           <!--Modal de Registro-->
           <div class="modal fade" id="modelRegistro">
             <div class="modal-dialog">
@@ -105,7 +112,7 @@
           <!--Modal de Ingreso-->
           <div class="modal fade" id="modelIngreso">
             <div class="modal-dialog">
-              <div class="modal-content modal-color">
+              <div class="modal-content m">
                   <div class="modal-header">
                     <h4 class="modal-title">Ingresar</h4>
                   </div>
@@ -121,7 +128,7 @@
                       </div>
                     </form>
                   </div>
-                  <div class="modal-footer">
+                  <div class="modal-footer m">
                     <button class="btn btn-primary">Aceptar</button>
                     <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
                   </div>
