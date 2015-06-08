@@ -1,25 +1,25 @@
 <!doctype html>
-<html class="no-js" lang="es">
+<html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Project Renta de Vehiculos</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/main.css">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -36,19 +36,19 @@
             <span class="icon-bar app-bar"></span>
             <span class="icon-bar app-bar"></span>
           </button>
-          <a class="navbar-brand link-personalizado" href="#">Proj Renta</a>
+          <a class="navbar-brand link-personalizado" href="../index.php">Proj Renta</a>
         </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right nav-1">
-              <li><a href="php/vistaVehiculos.php">Vechículos
+              <li><a href="#">Vechículos
                 <span class="glyphicon icon-automobile"></span></a></li>
-              <li><a href="php/vistaDescuentos.php">Descuentos
+              <li><a href="vistaDescuentos.php">Descuentos
                 <span class="glyphicon icon-gift"></span></a></li>
-              <li><a href="php/vistaPaquetes.php">Paquetes
+              <li><a href="vistaPaquetes.php">Paquetes
                 <span class="glyphicon icon-briefcase"></span></a></li>
-              <li><a href="php/vistaContacto.php">Contactenos
+              <li><a href="vistaContacto.php">Contactenos
                 <span class="glyphicon icon-envelop"></span></a></li>
-              <li><a href="php/frmRegistro.php" data-toggle="modal">Registro
+              <li><a href="#modelRegistro" data-toggle="modal">Registro
                 <span class="glyphicon icon-user-plus"></span></a></li>
               <li><a href="#modelIngreso" data-toggle="modal">Ingresar
                 <span class="glyphicon icon-users"></span></a></li>
@@ -62,8 +62,53 @@
         <div class="container">
           <h1>Proj Renta</h1>
           <p>Renta de vehículos en linea</p>
-        <div>
 
+          <!--Modal de Registro-->
+          <div class="modal fade" id="modelRegistro">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header m">
+                    <h4 class="modal-title">Formulario de Registro</h4>
+                  </div>
+                  <div class="modal-body m">
+                    <form action="#" method="POST">
+                      <div class="form-group">
+                        <label for="nombre"></label>
+                        <input type="text" name="nom" placeholder="Nombre">
+                      </div>
+                      <div class="form-group">
+                        <label for="edad"></label>
+                        <input type="text" name="edad" placeholder="Edad">
+                      </div>
+                      <div class="form-group">
+                        <label for="telefono"></label>
+                        <input type="text" name="tel" placeholder="Teléfono">
+                      </div>
+                      <div class="form-group">
+                        <label for="correo"></label>
+                        <input type="text" name="mail" placeholder="E-mail">
+                      </div>
+                      <div class="form-group">
+                        <label for="nacionalidad"></label>
+                        <input type="text" name="nacio" placeholder="Nacionalidad">
+                      </div>
+                      <div class="form-group">
+                        <label for="pass"></label>
+                        <input type="password" name="pass" placeholder="Password">
+                      </div>
+                      <div class="form-group">
+                        <label for="con-pass"></label>
+                        <input type="password" name="con-pass" placeholder="Confirm Password">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer m">
+                    <input type="text" class="btn btn-primary" value="Aceptar" name="aceptVehi">
+                    <input type="text" class="btn btn-default" value="Cancelar" name="cancelVehi" data-dismiss="modal">
+                  </div>
+              </div>
+            </div>
+          </div>
           <!--Modal de Ingreso-->
           <div class="modal fade" id="modelIngreso">
             <div class="modal-dialog">
@@ -75,7 +120,7 @@
                     <form action="#" method="POST">
                       <div class="form-group">
                         <label for="user"></label>
-                        <input type="text" name="user" placeholder="E-Mail">
+                        <input type="text" name="user" placeholder="Usename">
                       </div>
                       <div class="form-group">
                         <label for="pass"></label>
@@ -84,8 +129,8 @@
                     </form>
                   </div>
                   <div class="modal-footer m">
-                    <input type="text" class="btn btn-primary" value="Aceptar" name="acept1">
-                    <input type="text" class="btn btn-default" value="Cancelar" name="cancel1" data-dismiss="modal">
+                    <input type="text" class="btn btn-primary" value="Aceptar" name="aceptVehi1">
+                    <input type="text" class="btn btn-default" value="Cancelar" name="cancelVehi1" data-dismiss="modal">
                   </div>
               </div>
             </div>
@@ -93,7 +138,8 @@
         </div>
       </section>
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <?php
+    /*<div class="jumbotron">
       <div class="container">
         <div class="carousel slide" id="miSlider" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -122,8 +168,8 @@
           </div>
         </div>
       </div>
-    </div>
-
+    </div>*/
+    ?>
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
@@ -150,41 +196,12 @@
         <p>&copy; BRBJ S.A. de C.V. 2015</p>
       </footer>
 
-
-      <a href="#miSlider" class="carousel-control left" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a href="#miSlider" class="carousel-control right" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-      </a>
-
-
-
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="../js/vendor/bootstrap.min.js"></script>
 
-        <script src="js/main.js"></script>
-        <script type="text/javascript">
-          $('#acept').click(function(){
-            var name = $('#nom');
-            var edad = $('#edad');
-            var tel = $('#tel');
-            var mail = $('#mail');
-            var pass = $('#pass');
-            var nac = $('#nac');
-
-            var datos = "name="+name+"edad="+edad+"tel="+tel+"mail="+mail+"pass="+pass+"nac="+nac;
-            $.ajax({
-              type: "POST",
-              url: "../Controller/controlador.php",
-              data: datos
-            }).done(function(data){
-              document.message("Todo listo");
-            });
-          });
-        </script>
+        <script src="../js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--<script>
