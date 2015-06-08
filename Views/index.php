@@ -48,7 +48,7 @@
                 <span class="glyphicon icon-briefcase"></span></a></li>
               <li><a href="php/vistaContacto.php">Contactenos
                 <span class="glyphicon icon-envelop"></span></a></li>
-              <li><a href="#modelRegistro" data-toggle="modal">Registro
+              <li><a href="php/frmRegistro.php" data-toggle="modal">Registro
                 <span class="glyphicon icon-user-plus"></span></a></li>
               <li><a href="#modelIngreso" data-toggle="modal">Ingresar
                 <span class="glyphicon icon-users"></span></a></li>
@@ -62,54 +62,8 @@
         <div class="container">
           <h1>Proj Renta</h1>
           <p>Renta de vehículos en linea</p>
+        <div>
 
-          <!--Modal de Registro-->
-          <div class="modal fade" id="modelRegistro">
-            <form action="#" method="POST">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header m">
-                    <h4 class="modal-title">Formulario de Registro</h4>
-                  </div>
-                  <div class="modal-body m">
-                    <form action="#" method="POST">
-                      <div class="form-group">
-                        <label for="nombre"></label>
-                        <input type="text" name="nom" placeholder="Nombre">
-                      </div>
-                      <div class="form-group">
-                        <label for="edad"></label>
-                        <input type="text" name="edad" placeholder="Edad">
-                      </div>
-                      <div class="form-group">
-                        <label for="telefono"></label>
-                        <input type="text" name="tel" placeholder="Teléfono">
-                      </div>
-                      <div class="form-group">
-                        <label for="correo"></label>
-                        <input type="text" name="mail" placeholder="E-mail">
-                      </div>
-                      <div class="form-group">
-                        <label for="nacionalidad"></label>
-                        <input type="text" name="nacio" placeholder="Nacionalidad">
-                      </div>
-                      <div class="form-group">
-                        <label for="pass"></label>
-                        <input type="password" name="pass" placeholder="Password">
-                      </div>
-                      <div class="form-group">
-                        <label for="con-pass"></label>
-                        <input type="password" name="con-pass" placeholder="Confirm Password">
-                      </div>
-                  </div>
-                  <div class="modal-footer m">
-                    <input type="submit" class="btn btn-primary" value="Aceptar" name="acept">
-                    <input type="submit" class="btn btn-default" value="Cancelar" name="cancel" data-dismiss="modal">
-                  </div>
-              </div>
-            </div>
-          </form>
-          </div>
           <!--Modal de Ingreso-->
           <div class="modal fade" id="modelIngreso">
             <div class="modal-dialog">
@@ -212,6 +166,25 @@
         <script src="js/vendor/bootstrap.min.js"></script>
 
         <script src="js/main.js"></script>
+        <script type="text/javascript">
+          $('#acept').click(function(){
+            var name = $('#nom');
+            var edad = $('#edad');
+            var tel = $('#tel');
+            var mail = $('#mail');
+            var pass = $('#pass');
+            var nac = $('#nac');
+
+            var datos = "name="+name+"edad="+edad+"tel="+tel+"mail="+mail+"pass="+pass+"nac="+nac;
+            $.ajax({
+              type: "POST",
+              url: "../Controller/controlador.php",
+              data: datos
+            }).done(function(data){
+              document.message("Todo listo");
+            });
+          });
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--<script>

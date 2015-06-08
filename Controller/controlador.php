@@ -1,29 +1,27 @@
 <?php
-require_once 'Model/Cliente.php';
+require_once 'Conexion/Conectar.php';
 if (isset($_POST["acept"])) {
-  $pass = $_POST["pass"];
-  $confPass = $_POST["con-pass"];
-  if ($pass==$confPass) {
-    $cliente = new Cliente();
+    $confPass = $_POST["con-pass"];
     $id = "";
-    $nombre = $_POST["nom"];
+    $nom = $_POST["nom"];
     $edad = $_POST["edad"];
     $tel = $_POST["tel"];
-    $correo = $_POST["mail"];
-    $nac = $_POST["nacio"];
-    $cliente -> setIdCliente($id);
+    $mail = $_POST["mail"];
+    $pass = $_POST["pass"];
+    $nac = $_POST["nac"];
+    $conul = $conexion->prepare("insert into cliente values('',?,?,?,?,?,?)");
+    $conul->bind_param('1',$nom,$edad,$tel,$mail,$pass,$nac);
+    /*$cliente -> setIdCliente($id);
     $cliente -> setNombre($nombre);
     $cliente -> setEdad($edad);
     $cliente -> setTelefono($tel);
     $cliente -> setCorreo($correo);
     $cliente -> setPass($pass);
     $cliente -> setNacionalidad($nac);
-    $cliente -> agregarDatos($id, $nombre, $edad, $tel, $correo, $pass, $nac);
-  }else {
-    print("<script>alert('No coinciden las contraseñas')</script>");
-  }
-
-
+    $cliente -> agregarDatos($id, $nombre, $edad, $tel, $correo, $pass, $nac);*/
+    header("location: Views/index.php");
 }
-require 'Views/index.php';
+header("location: Views/index.php");
+
+
 ?>
